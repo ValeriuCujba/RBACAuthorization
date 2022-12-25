@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/AuthorizationRBAC">
+    
+     <Resource name="jdbc/role-group-authorization" auth="Container" type="javax.sql.DataSource"
+              maxTotal="100" maxIdle="30" maxWaitMillis="10000"
+              username="iucosoftStudent" password="iucosoftStudent" driverClassName="com.mysql.cj.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/role-group-authorization"/>
+    
+</Context>
