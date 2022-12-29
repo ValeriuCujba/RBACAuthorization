@@ -8,9 +8,33 @@
         <servlet-name>PermissionServlet</servlet-name>
         <servlet-class>servlets.cms.PermissionServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RoleServlet</servlet-name>
+        <servlet-class>servlets.cms.RoleServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UserServlet</servlet-name>
+        <servlet-class>servlets.cms.UserServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <servlet-class>servlets.RegistrationServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>PermissionServlet</servlet-name>
         <url-pattern>/cms/permissions</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RoleServlet</servlet-name>
+        <url-pattern>/cms/roles</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserServlet</servlet-name>
+        <url-pattern>/cms/users</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <url-pattern>/registration</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

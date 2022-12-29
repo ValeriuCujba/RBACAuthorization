@@ -1,11 +1,11 @@
 
-package dao.intf;
+package services.intf;
 
 import entities.Role;
 import java.util.List;
 
 
-public interface RoleDao {    
+public interface RoleService {
     
     void create(Role role) throws Exception;
 
@@ -17,5 +17,5 @@ public interface RoleDao {
 
     List<Role> findAll() throws Exception;
     
-     List<Role> findRolesByUserId(int id)throws Exception;
+    List<Role> findRolesByUserId(int id) throws Exception;
 }

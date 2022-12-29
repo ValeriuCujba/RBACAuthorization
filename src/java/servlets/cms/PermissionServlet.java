@@ -73,7 +73,7 @@ public class PermissionServlet extends HttpServlet {
         if (request.getAttribute("permissionToEdit") == null) {
             request.setAttribute("permissionToEdit", new Permission(0, ""));
         }
-        String path = "/WEB-INF/pages/permissions.jsp";
+        String path = "/WEB-INF/pages/cms/permissions.jsp";
         request.getRequestDispatcher(path).forward(request, response);
     }
 

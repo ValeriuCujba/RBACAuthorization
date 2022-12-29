@@ -3,9 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Valeriu/Documents/NetBeansProjects/AuthorizationRBAC/src/java/dao/intf/UserDao.java</file>
+            <file>file:/C:/Users/Valeriu/Documents/NetBeansProjects/AuthorizationRBAC/src/java/services/intf/RoleService.java</file>
+            <file>file:/C:/Users/Valeriu/Documents/NetBeansProjects/AuthorizationRBAC/src/java/services/JDBCImpl/UserJDBCService.java</file>
             <file>file:/C:/Users/Valeriu/Documents/NetBeansProjects/AuthorizationRBAC/src/java/dao/impl/UserDaoImpl.java</file>
-            <file>file:/C:/Users/Valeriu/Documents/NetBeansProjects/AuthorizationRBAC/src/java/entities/User.java</file>
+            <file>file:/C:/Users/Valeriu/Documents/NetBeansProjects/AuthorizationRBAC/src/java/servlets/RegistrationServlet.java</file>
+            <file>file:/C:/Users/Valeriu/Documents/NetBeansProjects/AuthorizationRBAC/src/java/services/intf/UserService.java</file>
+            <file>file:/C:/Users/Valeriu/Documents/NetBeansProjects/AuthorizationRBAC/src/java/services/JDBCImpl/RoleJDBCService.java</file>
+            <file>file:/C:/Users/Valeriu/Documents/NetBeansProjects/AuthorizationRBAC/web/WEB-INF/pages/cms/roles.jsp</file>
+            <file>file:/C:/Users/Valeriu/Documents/NetBeansProjects/AuthorizationRBAC/src/java/dao/intf/UserDao.java</file>
+            <file>file:/C:/Users/Valeriu/Documents/NetBeansProjects/AuthorizationRBAC/web/WEB-INF/pages/registration.jsp</file>
+            <file>file:/C:/Users/Valeriu/Documents/NetBeansProjects/AuthorizationRBAC/src/java/servlets/cms/PermissionServlet.java</file>
+            <file>file:/C:/Users/Valeriu/Documents/NetBeansProjects/AuthorizationRBAC/web/WEB-INF/pages/cms/users.jsp</file>
+            <file>file:/C:/Users/Valeriu/Documents/NetBeansProjects/AuthorizationRBAC/src/java/listeners/ServiceListener.java</file>
+            <file>file:/C:/Users/Valeriu/Documents/NetBeansProjects/AuthorizationRBAC/src/java/dao/impl/RoleDaoImpl.java</file>
         </group>
     </open-files>
 </project-private>
