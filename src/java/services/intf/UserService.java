@@ -1,12 +1,14 @@
-package dao.intf;
+
+package services.intf;
 
 import entities.Group;
 import entities.Role;
 import entities.User;
 import java.util.List;
 
-public interface UserDao {
 
+public interface UserService {
+    
     void create(User user) throws Exception;
 
     void update(User user) throws Exception;
@@ -20,4 +22,5 @@ public interface UserDao {
     void addRole(User user, Role role) throws Exception;
 
     void addGroup(Group group, User user) throws Exception;
+    
 }

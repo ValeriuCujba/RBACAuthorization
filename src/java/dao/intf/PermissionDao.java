@@ -14,4 +14,6 @@ public interface PermissionDao {
     Permission findById(int id) throws Exception;
 
     List<Permission> findAll() throws Exception;
+    
+    List<Permission> findPermissionsByRoleId(int id)throws Exception;
 }

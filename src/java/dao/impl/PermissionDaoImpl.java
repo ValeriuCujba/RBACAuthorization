@@ -92,7 +92,10 @@ public class PermissionDaoImpl implements PermissionDao {
                 permission = new Permission(id, name);
 
             }
-            //  preparedStatement.execute();
+
+        } catch (SQLException sqle) {
+            LOG.severe(sqle.toString());
+            throw sqle;
         }
         return permission;
     }
@@ -114,9 +117,43 @@ public class PermissionDaoImpl implements PermissionDao {
 
                 permissions.add(permission);
             }
-            preparedStatement.execute();
+//            preparedStatement.execute();
 
+        } catch (SQLException sqle) {
+            LOG.severe(sqle.toString());
+            throw sqle;
         }
         return permissions;
+    }
+
+    @Override
+    public List<Permission> findPermissionsByRoleId(int id) throws Exception {
+
+        String sql = "SELECT * FROM permissions\n"
+                + "JOIN role_has_permissions USING (permission_id)\n"
+                + "WHERE role_has_permissions.role_id = ?;";
+
+        List<Permission> permissions = new ArrayList<>();
+        try (Connection connection = dataSource.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);) {
+
+            preparedStatement.setInt(1, id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                int permissionId = resultSet.getInt(1);
+                String name = resultSet.getString(2);
+
+                Permission permission = new Permission(permissionId, name);
+
+                permissions.add(permission);
+            }
+            preparedStatement.execute();
+
+        } catch (SQLException sqle) {
+            LOG.severe(sqle.toString());
+            throw sqle;
+        }
+        return permissions;
+
     }
 }

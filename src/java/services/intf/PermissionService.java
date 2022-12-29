@@ -14,4 +14,6 @@ public interface PermissionService {
     Permission findById(int id) throws Exception;
 
     List<Permission> findAll() throws Exception;
+    
+    
 }

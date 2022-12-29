@@ -1,18 +1,16 @@
 
 package services.JDBCImpl;
 
-import dao.impl.RoleDaoImpl;
 import dao.intf.PermissionDao;
 import entities.Permission;
 import java.util.List;
 import java.util.logging.Logger;
-import javax.sql.DataSource;
 import services.intf.PermissionService;
 
 
 public class PermissionJDBCService implements PermissionService{
 
-    private PermissionDao permissionDao;
+    private final PermissionDao permissionDao;
     private static PermissionJDBCService instance;
     private static final Logger LOG = Logger.getLogger(PermissionJDBCService.class.getName());
 
@@ -31,7 +29,11 @@ public class PermissionJDBCService implements PermissionService{
     
     @Override
     public void create(Permission permission) throws Exception {
-        permissionDao.create(permission);
+        Permission perm = permissionDao.findById(permission.getId());
+        if(perm == null){
+            permissionDao.create(permission);
+        }        
+        
     }
 
     @Override
